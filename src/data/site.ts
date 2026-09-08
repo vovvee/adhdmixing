@@ -19,5 +19,11 @@ export const site = {
     { name: 'PROJECT / EP', price: 'CUSTOM', detail: 'Multi-song projects', features: ['[SCOPE FROM PRICE LIST]', '[CUSTOM PRICING TERMS]', '[DELIVERY DETAILS]'], featured: false },
   ],
   about: { text: 'I work with artists who care about the last ten percent—the decisions that turn a good session into a record you want to live with.', experience: '[YOUR EXPERIENCE]', credits: '[YOUR CREDITS]', location: '[YOUR LOCATION]' },
-  contact: { email: 'hello@adhdmixing.com', instagram: '#', instagramLabel: '[INSTAGRAM]' },
+  contact: {
+    email: 'adhdmusic.contact@gmail.com',
+    telegram: 'https://t.me/adhdmixing',
+    telegramLabel: '@adhdmixing',
+    instagram: 'https://www.instagram.com/adhdmixing?stkn=ank5YzMzcnJzeWQw&utm_source=qr',
+    instagramLabel: 'INSTAGRAM',
+  },
 }
