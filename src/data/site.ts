@@ -23,7 +23,7 @@ export const site = {
     email: 'adhdmusic.contact@gmail.com',
     telegram: 'https://t.me/adhdmixing',
     telegramLabel: '@adhdmixing',
-    instagram: 'https://www.instagram.com/adhdmixing?stkn=ank5YzMzcnJzeWQw&utm_source=qr',
+    instagram: 'https://www.instagram.com/adhdmixing',
     instagramLabel: 'INSTAGRAM',
   },
 }
