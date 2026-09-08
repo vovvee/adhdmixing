@@ -8,7 +8,7 @@ export const site = {
   ],
   projects: [
     { title: 'PROJECT 01', artist: '[ARTIST NAME]', genre: '[GENRE]', description: 'A placeholder for a mix transformation. Replace the audio paths below when your files are ready.', before: '/audio/project-01-before.mp3', after: '/audio/project-01-after.mp3' },
-    { title: 'PROJECT 02', artist: '[ARTIST NAME]', genre: '[GENRE]', description: 'A placeholder for a mix transformation. Replace the audio paths below when your files are ready.', before: '/audio/project-02-before.mp3', after: '/audio/project-02-after.mp3' },
+    { title: 'ТЁМНЫЕ МЫСЛИ', artist: 'noqlu', genre: 'ROCK / METAL', description: 'Test before/after comparison for this mix.', before: '/audio/project-02-before.m4a', after: '/audio/project-02-after.m4a' },
     { title: 'PROJECT 03', artist: '[ARTIST NAME]', genre: '[GENRE]', description: 'A placeholder for a mix transformation. Replace the audio paths below when your files are ready.', before: '/audio/project-03-before.mp3', after: '/audio/project-03-after.mp3' },
   ],
   // TODO: Replace this array with the exact information from the supplied pricing PDF.

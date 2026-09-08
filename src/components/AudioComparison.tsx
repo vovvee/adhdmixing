@@ -8,7 +8,7 @@ const format = (seconds: number) => `${Math.floor(seconds / 60)}:${String(Math.f
 
 export function AudioComparison({ title, before, after }: Props) {
   const audio = useRef<HTMLAudioElement>(null)
-  const [mode, setMode] = useState<Mode>('before')
+  const [mode, setMode] = useState<Mode>('after')
   const [playing, setPlaying] = useState(false)
   const [current, setCurrent] = useState(0)
   const [duration, setDuration] = useState(0)
@@ -19,11 +19,12 @@ export function AudioComparison({ title, before, after }: Props) {
   const toggle = () => { if (!audio.current) return; playing ? audio.current.pause() : audio.current.play().catch(() => undefined) }
   const changeMode = (next: Mode) => { if (next === mode) return; const wasPlaying = playing; setMode(next); requestAnimationFrame(() => { if (wasPlaying) audio.current?.play().catch(() => undefined) }) }
   const seek = (value: number) => { if (audio.current) audio.current.currentTime = value; setCurrent(value) }
-  const source = mode === 'before' ? before : after
+  const file = mode === 'before' ? before : after
+  const source = `${import.meta.env.BASE_URL}${file.replace(/^\//, '')}`
   return <div className="audio-box">
     <div className="audio-tabs" role="group" aria-label={`Compare ${title} versions`}>
-      <button className={mode === 'before' ? 'active' : ''} onClick={() => changeMode('before')}>BEFORE</button>
       <button className={mode === 'after' ? 'active' : ''} onClick={() => changeMode('after')}>AFTER</button>
+      <button className={mode === 'before' ? 'active' : ''} onClick={() => changeMode('before')}>BEFORE</button>
     </div>
     <audio ref={audio} key={source} src={source} preload="none"
       onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} onEnded={() => setPlaying(false)}
